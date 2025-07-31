@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Is It Party Time</title>
+
+		<script src="http://code.jquery.com/jquery-2.1.1.js"> </script>
+		<script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"> </script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.js"> </script>
+		
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded", function(event) { 
+				const now = new Date();
+				const hours = now.getHours();
+				
+				if (hours > 16 || hours < 4) {
+					document.getElementById("sleep").style.display ='none';
+					document.getElementById("not").style.display ='none';
+					setInterval(function() {
+						document.getElementById("colorful").style.backgroundColor = '#000000';
+						document.getElementById("colorful").style.backgroundColor = '#FFFFFF';
+					}, 200);
+				} else if ( hours < 9 && hours >= 4) {
+					document.getElementById("colorful").style.display ='none';
+					document.getElementById("not").style.display ='none';
+				} else {
+					document.getElementById("colorful").style.display ='none';
+					document.getElementById("sleep").style.display ='none';			
+				}
+
+				const options = { hour: '2-digit', minute: '2-digit'}
+				const displayTime = now.toLocaleTimeString(undefined, options);
+				
+				document.getElementById("time1").textContent = displayTime;	
+				document.getElementById("time2").textContent = displayTime;	
+				document.getElementById("time3").textContent = displayTime;	
+			});
+		</script>
+    </head>
+
+    <body style="height:100%; width:100%;margin: 0;">
+    	<div id= "colorful" style="height: 100%;text-align:center; padding-top:1%; transition: left 500ms ease-in-out, top 500ms ease-in-out;">
+			<p style="font-size: 30px;line-height:80%"> Is it party time? </p> 
+			<p style="font-size: 100px; line-height:80%; margin:30px 0px 30px 0px">YAAAAASS!!</p>
+			<p id="time1" style="font-size: 30px;margin:10px 0px 20px 0px;line-height:80%">Current Time is: 00:00 </p>
+			<img height="350px" src="https://gabrielavoll.github.io/public/silly-single-purpose/party.gif">
+	    </div>
+	    <div id= "sleep" style="height: 100%;text-align:center; padding-top:1%">
+			<p style="font-size: 30px;line-height:80%"> Is it party time? </p> 
+			<p style="font-size: 70px; line-height:80%; margin:30px 0px 30px 0px">No, go the fuck to sleep.</p>
+			<p id="time2" style="font-size: 30px;margin:10px 0px 20px 0px;line-height:80%">Current Time is: 00:00 </p>
+			<img height="350px" src="https://gabrielavoll.github.io/public/silly-single-purpose/sleep.jpg">
+		
+	    </div>
+	    <div id="not" style="height: 100%;text-align:center; padding-top:1%">
+			<p style="font-size: 30px;line-height:80%"> Is it party time? </p> 
+			<p style="font-size: 80px; line-height:80%; margin:30px 0px 30px 0px"> No. It is time to twerk.</p>
+			<p id="time3" style="font-size: 30px;margin:10px 0px 20px 0px;line-height:80%">Current Time is: 00:00 </p>
+			<img height="350px" src="https://gabrielavoll.github.io/public/silly-single-purpose/twerk.gif">
+	    </div>
+    </body>
+
+	<style>
+
+		#colorful {
+			background-color: #FFFF00;
+		}
+		#not {
+			background-color: #FFFFFF;
+		}
+		#sleep {
+			background-color: #444499; 
+		}
+		html,body {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+
+
+</html>
+

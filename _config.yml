@@ -1,0 +1,15 @@
+lsi: false
+safe: true
+title: Silly Single Purpose 
+description: >-
+  Silly Single Purpose App: tells you wheather or not it is party time
+domain: gabrielavoll.github.io
+url: "https://gabrielavoll.github.io"
+baseurl: /silly-single-purpose/
+incremental: false 
+highlighter: rouge
+gist: 
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge

@@ -5,17 +5,13 @@ This single-purpose app, tell you whether or not it is party time. It is indeed 
 
 To run locally: 
 
-Download the files
+Download/Clone Repo
 
-in Terminal: install bundler ( to utilize the versions of sinatra and ruby specified)
+to install gemfile
+in Terminal: bundle install 
 
-in Terminal: heroku create
-
-in Terminal: git push heroku master
-
-in Terminal: heroku open 
-
-and the website should be up at whatever randomly generated website they give you 
+to build server locally http://127.0.0.1:4000/
+in Terimal: bundle exec jekyll serve     
 
 
-link to the live app on Heroku: http://isitpartytime.herokuapp.com/
+link to the live app on Heroku: http://gabrielavoll.github.io/silly-single-purpose
