@@ -15,9 +15,10 @@
 				if (hours > 16 || hours < 4) {
 					document.getElementById("sleep").style.display ='none';
 					document.getElementById("not").style.display ='none';
+					let isFlashing = true; 
 					setInterval(function() {
-						document.getElementById("colorful").style.backgroundColor = '#000000';
-						document.getElementById("colorful").style.backgroundColor = '#FFFFFF';
+						isFlashing = !isFlashing;
+						document.getElementById("colorful").style.backgroundColor = isFlashing ? '#000000' : '#FFFFFF';
 					}, 200);
 				} else if ( hours < 9 && hours >= 4) {
 					document.getElementById("colorful").style.display ='none';
